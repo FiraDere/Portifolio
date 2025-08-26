@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
+import myPhoto from "./assets/3G7A0252.jpg";
 
 
 
@@ -13,11 +14,13 @@ const sendEmail = (e) => {
 
   emailjs
     .sendForm(
-      "service_ngvbpej",   // Replace with your EmailJS Service ID
-      "template_rj3oltc",  // Replace with your EmailJS Template ID
-      formRef.current,
-      "z9KHxvOdVI9PIny77"    // Replace with your EmailJS Public Key
-    )
+    emailjs.sendForm(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  formRef.current,
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
+)
     .then(
       (result) => {
         console.log(result.text);
@@ -86,7 +89,7 @@ const sendEmail = (e) => {
           viewport={{ once: true }}
         >
           <img
-            src="/3G7A0252.jpg"
+            src={myPhoto}
             alt="Fraol Deresse"
             className="w-100 h-100 object-cover rounded-full shadow-xl border-4 border-white dark:border-gray-700 hover:scale-105 transition"></img>
         </motion.div>
