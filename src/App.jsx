@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
-import myPhoto from "./assets/A3G7A0252.jpg";
+import myPhoto from "./assets/A3G7A0252.JPG";
 
 
 
@@ -14,12 +14,10 @@ const sendEmail = (e) => {
 
   emailjs
     .sendForm(
-    emailjs.sendForm(
   import.meta.env.VITE_EMAILJS_SERVICE_ID,
   import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   formRef.current,
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-)
 )
     .then(
       (result) => {
