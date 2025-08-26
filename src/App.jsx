@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
-import myPhoto from "./assets/3G7A0252.jpg";
+import myPhoto from "./assets/A3G7A0252.jpg";
 
 
 
